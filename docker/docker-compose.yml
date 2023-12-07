@@ -47,6 +47,7 @@ services:
       - POSTGRES_DB=${OPS_POSTGRES_DB}
       - POSTGRES_CONTAINER_NAME=${OPS_POSTGRES_CONTAINER_NAME}
       - POSTGRES_PORT=${OPS_POSTGRES_PORT}
+      - AIRFLOW__WEBSERVER__SECRET_KEY=123456789
     volumes:
       - ../dags:/opt/airflow/dags
       - ../data:/opt/airflow/data
@@ -68,6 +69,7 @@ services:
       - POSTGRES_DB=${OPS_POSTGRES_DB}
       - POSTGRES_CONTAINER_NAME=${OPS_POSTGRES_CONTAINER_NAME}
       - POSTGRES_PORT=${OPS_POSTGRES_PORT}
+      - AIRFLOW__WEBSERVER__SECRET_KEY=123456789
     volumes:
       - ../dags:/opt/airflow/dags
       - ../data:/opt/airflow/data
